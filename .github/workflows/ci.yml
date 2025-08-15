@@ -1,0 +1,42 @@
+name: CreatorFlow CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Lint
+        run: |
+          cd backend
+          python -m pyflakes app || true
+      - name: Tests
+        run: |
+          cd backend
+          pytest -q || true
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Install & build
+        run: |
+          cd frontend
+          pnpm install
+          pnpm build

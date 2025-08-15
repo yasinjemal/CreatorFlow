@@ -1,0 +1,21 @@
+{
+  "name": "creatorflow-frontend",
+  "private": true,
+  "scripts": {
+    "dev": "npx nuxi dev --port 3000 --host 0.0.0.0",
+    "build": "nuxt build",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "nuxt": "^3.12.3",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.31",
+    "axios": "^1.7.2",
+    "@pinia/nuxt": "^0.5.1",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "daisyui": "^4.12.10"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

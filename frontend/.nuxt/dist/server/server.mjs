@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Users/bpass/Downloads/creatorflow_scaffold/frontend/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
