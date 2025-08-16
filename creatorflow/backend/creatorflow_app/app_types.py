@@ -1,0 +1,1 @@
+# Placeholder module for potential future type exports
