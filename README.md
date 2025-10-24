@@ -73,5 +73,10 @@ This scaffold includes:
 - Use MongoDB Atlas and managed Redis for reliability.
 - Run multiple `worker` replicas for throughput; use queues per priority.
 
+## Additional Documentation
+- [Social platform integration guide](docs/integrations.md)
+- [Content optimization strategy](docs/content-optimization.md)
+- [Scaling and operations playbook](docs/scaling.md)
+
 Extend `services/ai/gpt_client.py` to wire your GPT-5 provider.
 ```
